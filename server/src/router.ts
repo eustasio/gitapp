@@ -1,4 +1,5 @@
 import express from "express";
+import repos from "./repos/repocontroller";
  
  const router = express.Router();
  
@@ -8,5 +9,5 @@ import express from "express";
  router.get("/", (req, res) => {
    res.status(200).send("Tout est OK");
  });
- 
+ router.use("/repos", repos);
  export default router;
